@@ -7,17 +7,22 @@ import { AppComponent } from './app.component';
 
 import { AlertModule } from 'ngx-bootstrap';
 
+import { GitRepoComponent } from './git-repo/git-repo.component';
+import { GitRepoService } from './git-repo/git-repo.service';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GitRepoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    HttpModule
   ],
-  providers: [],
+  providers: [GitRepoService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
